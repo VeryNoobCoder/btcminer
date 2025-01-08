@@ -1,12 +1,32 @@
 import random
 import time
 
+# ASCII Art Font
+def display_ascii_art():
+    print("""
+  ____ _______ _____ __  __ _____ _   _ ______ _____  
+ |  _ \__   __/ ____|  \/  |_   _| \ | |  ____|  __ \ 
+ | |_) | | | | |    | \  / | | | |  \| | |__  | |__) |
+ |  _ <  | | | |    | |\/| | | | | . ` |  __| |  _  / 
+ | |_) | | | | |____| |  | |_| |_| |\  | |____| | \ \ 
+ |____/  |_|  \_____|_|  |_|_____|_| \_|______|_|  \_\
+                                                      
+          
+                                        ~Created by @tjm.builds on Snapchat and IG              
+""")
+
+# Function to generate a random line of characters
 def generate_random_line(length=60):
     """Generate a random string of uppercase, lowercase, and numbers."""
     chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
     return ''.join(random.choice(chars) for _ in range(length))
 
+# Main mining simulation function
 def simulate_bitcoin_miner():
+    # Display the ASCII art
+    display_ascii_art()
+    
+    # Ask the user for their Bitcoin wallet address
     wallet = input("Enter your Bitcoin Wallet: ")
     print("Starting Bitcoin miner...\n")
     time.sleep(2)  # Simulate a brief pause
